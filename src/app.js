@@ -16,41 +16,6 @@ store.subscribe(() => {
 	console.log(store.getState());
 });
 
-/// ACTIONS
-store.dispatch(addExpense(
-	{
-		description: 'Water bill',
-		note:'Immediate payement needed',
-		amount: 8600,
-		createdAt: 120
-	}
-));
-
-store.dispatch(addExpense(
-	{
-		description: 'Gas bill',
-		note:'Immediate payement needed',
-		amount: 5642,
-		createdAt: 122
-	}
-));
-
-store.dispatch(addExpense(
-	{
-		description: 'Rent',
-		note:'Immediate payement needed',
-		amount: 60000,
-		createdAt: 111
-	}
-));
-
-const state = store.getState();
-
-console.log(
-	getVisibleExpenses(state.expenses, state.filters)
-);
-/// END ACTION
-
 const jsx = (
 	<Provider store={store}>
 		<AppRouter />
