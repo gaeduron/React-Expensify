@@ -1,4 +1,4 @@
-import { startAddExpense, startRemoveExpense, addExpense, editExpense, removeExpense, setExpenses, startSetExpenses } from '../../actions/expenses';
+import { startAddExpense, startRemoveExpense, startEditExpense, addExpense, editExpense, removeExpense, setExpenses, startSetExpenses } from '../../actions/expenses';
 import expenses from '../fixtures/expenses';
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
@@ -138,7 +138,28 @@ test('should remove expense from database', (done) => {
 		});
 
 		database.ref(`expenses/${expenseID}`).once('value').then((snapshot) => {
-			expect(snapshot.val()).toBe(null);
+			expect(snapshot.val()).toBeFalsy();
+			done();
+		});
+	});
+
+});
+
+test('should edit expense on database', (done) => {
+	const store = createMockStore({});
+	const expenseID = 2;
+	const updates = { note: 'Important note test !' };
+
+	store.dispatch(startEditExpense(expenseID, updates)).then(() => {
+		const actions = store.getActions();
+		expect(actions[0]).toEqual({
+			type: 'EDIT_EXPENSE',
+			id: 2,
+			updates
+		});
+
+		database.ref(`expenses/${expenseID}/note`).once('value').then((snapshot) => {
+			expect(snapshot.val()).toBe('Important note test !');
 			done();
 		});
 	});
