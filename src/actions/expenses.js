@@ -1,5 +1,6 @@
 import uuid from 'uuid';
 import database from '../firebase/firebase'
+import { exportArrayFromSnapshot } from '../firebase/utils';
 
 ////////DISPATCH ACTIONS////////
 //ADD EXPENSE
@@ -33,6 +34,17 @@ export const removeExpense = ({id = 0} = {}) => ({
 	id
 });
 
+export const startRemoveExpense = (id = 0) => {
+	return (dispatch) => {
+		const expenseID = id;
+		return database.ref(`expenses/${expenseID}`).remove().then(() => {
+			dispatch(removeExpense({
+				id: expenseID
+			}));	
+		});
+	};
+};
+
 //EDIT EXPENSE
 export const editExpense = (id, updates) => ({
 	type: 'EDIT_EXPENSE',
@@ -40,4 +52,19 @@ export const editExpense = (id, updates) => ({
 	updates
 
 });
+
+//SET_EXPENSES
+export const setExpenses = (expenses) => ({
+	type: 'SET_EXPENSES',
+	expenses
+});
+
+export const startSetExpenses = () => {
+	return (dispatch) => {
+		return database.ref('expenses').once('value').then((snapshot) => {
+			dispatch(setExpenses(exportArrayFromSnapshot(snapshot)));
+		});
+	};
+};
+
 ////////----------------////////
