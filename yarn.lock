@@ -6,6 +6,10 @@
   version "6.0.89"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-6.0.89.tgz#154be0e6a823760cd6083aa8c48f952e2e63e0b0"
 
+"@types/react@*":
+  version "16.0.18"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.0.18.tgz#c08eea79ada55bf10b5353e18c21797dd17afa23"
+
 abab@^1.0.3:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/abab/-/abab-1.0.4.tgz#5faad9c2c07f60dd76770f71cf025b62a63cfd4e"
@@ -4726,6 +4730,13 @@ react-dom@16.0.0:
     fbjs "^0.8.16"
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
+    prop-types "^15.6.0"
+
+react-google-login@3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/react-google-login/-/react-google-login-3.0.1.tgz#97852c7671dd06758fdc3208e5adc99b5431cab4"
+  dependencies:
+    "@types/react" "*"
     prop-types "^15.6.0"
 
 react-modal@2.2.2:

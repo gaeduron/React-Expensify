@@ -1,0 +1,36 @@
+.google__login {
+	background-color: #4285f4;
+	border: 1px solid transparent;
+	transition: background-color .218s,border-color .218s,box-shadow .218s;
+	color: #fff;
+	display: block;
+}
+
+.google__login:hover {
+	box-shadow: 0 0 3px 3px rgba(66,133,244,.3);
+}
+
+.glogo {
+	float: left;
+	background-color: #fff;
+	border-radius: 1px;
+	padding: 15px;
+	display: block;
+	width: 18px;
+	height: 18px;
+}
+
+.gtext {
+	font-family: Roboto,arial,sans-serif;
+	font-size: 16px;
+	line-height: 48px;
+	letter-spacing: 1.21px;
+	margin-left: 6px;
+	margin-right: 6px;
+	padding: 0 10px;
+	vertical-align: top;
+	-webkit-user-select: none;
+	cursor: pointer;
+	text-align: center;
+	white-space: nowrap;
+}

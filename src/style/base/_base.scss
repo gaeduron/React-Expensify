@@ -5,8 +5,9 @@ html {
 body {
 	font-family: helvetica, arial, sans-serif;
 	font-size: 1.6rem;
-	background: #111;
-	color:#DDD;
+	background: #EEEEEE;
+	color: $dark-grey;
+	line-height: 1.6;
 }
 
 button {
