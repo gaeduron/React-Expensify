@@ -57,7 +57,7 @@ test('should setup add expense action object with provided values', () => {
 });
 
 test('should add expense to database and store', (done) => {
-	const store = createMockStore({});
+	const store = createMockStore(defaultAuthState);
 	const expenseData = {
 		description: 'Mouse',
 		amount: 3000,
@@ -75,7 +75,7 @@ test('should add expense to database and store', (done) => {
 			}
 		});
 
-		database.ref(`expenses/${actions[0].expense.id}`).once('value').then((snapshot) => {
+		database.ref(`users/${uid}/expenses/${actions[0].expense.id}`).once('value').then((snapshot) => {
 			expect(snapshot.val()).toEqual(expenseData);
 			done();
 		});

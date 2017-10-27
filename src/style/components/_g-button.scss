@@ -4,6 +4,7 @@
 	transition: background-color .218s,border-color .218s,box-shadow .218s;
 	color: #fff;
 	display: block;
+	box-sizing: content-box;
 }
 
 .google__login:hover {
@@ -33,4 +34,55 @@
 	cursor: pointer;
 	text-align: center;
 	white-space: nowrap;
+	text-decoration: none;
+}
+
+.button-to-link {
+	background: none;
+	border: none;
+	border-radius: 2px;
+	padding: 0 $m-size;
+	color: #DDD;
+	letter-spacing: 1.21px;
+	font-family: Roboto,arial,sans-serif;
+	transition: color .218s,background-color .318s,box-shadow .218s;
+}
+
+.button-to-link:hover {
+	color: #FFF;
+	box-shadow: 0px 0px 20px -1px rgba(0,0,0,0.14);
+}
+
+.button {
+	background-color: #4285f4;
+	color: #fff;
+	border: 1px solid transparent;
+	font-family: Roboto,arial,sans-serif;
+	font-size: 16px;
+	line-height: 48px;
+	letter-spacing: 1.21px;
+	margin-left: 6px;
+	margin-right: 6px;
+	padding: 0 10px;
+	vertical-align: top;
+	-webkit-user-select: none;
+	cursor: pointer;
+	text-align: center;
+	white-space: nowrap;
+	text-decoration: none;
+	transition: background-color .218s,border-color .218s,box-shadow .218s;
+	display: block;
+}
+
+.button:hover {
+	    box-shadow: 0 0 3px 3px rgba(66,133,244,.3);
+}
+
+.button__secondary {
+	@extend .button;
+	background-color: #888888;
+}
+
+.button__secondary:hover {
+	box-shadow: 0 0 3px 3px rgba(80,80,80,.3);
 }

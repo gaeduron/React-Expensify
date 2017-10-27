@@ -1,0 +1,22 @@
+.page-header {
+	background: #f7f7f7;
+	margin-bottom: $l-size;
+	padding: $l-size 0;
+}
+
+.page-header__title {
+	font-weight: 300;
+	margin: 0;
+	span {
+		font-weight: 700;
+	}
+}
+
+.page-header__actions {
+	margin-top: $m-size;
+	display: inline-block;
+}
+
+.page-header__link {
+	text-decoration: none;
+}

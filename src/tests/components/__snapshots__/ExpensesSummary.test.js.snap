@@ -1,22 +1,88 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render ExpensesSummary correctly with 1 expense 1`] = `
-<p>
-  Viewing 
-  1
-   expense
-   totalling 
-  $1.95
-</p>
+<div
+  className="page-header"
+>
+  <div
+    className="content-container"
+  >
+    <h1
+      className="page-header__title"
+    >
+      Viewing 
+      <span>
+        1
+      </span>
+       expense
+       totalling 
+      <span>
+        $1.95
+      </span>
+    </h1>
+    <div
+      className="page-header__actions"
+    >
+      <Link
+        className="page-header__link"
+        replace={false}
+        to="/create"
+      >
+        <div
+          className="google__login"
+        >
+          <span
+            className="gtext"
+          >
+            Add Expense
+          </span>
+        </div>
+      </Link>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`should render ExpensesSummary correctly with multiples expenses 1`] = `
-<p>
-  Viewing 
-  3
-   expense
-  s
-   totalling 
-  $1,141.95
-</p>
+<div
+  className="page-header"
+>
+  <div
+    className="content-container"
+  >
+    <h1
+      className="page-header__title"
+    >
+      Viewing 
+      <span>
+        3
+      </span>
+       expense
+      s
+       totalling 
+      <span>
+        $1,141.95
+      </span>
+    </h1>
+    <div
+      className="page-header__actions"
+    >
+      <Link
+        className="page-header__link"
+        replace={false}
+        to="/create"
+      >
+        <div
+          className="google__login"
+        >
+          <span
+            className="gtext"
+          >
+            Add Expense
+          </span>
+        </div>
+      </Link>
+    </div>
+  </div>
+</div>
 `;
