@@ -3,6 +3,9 @@ import { connect } from 'react-redux';
 import { startLogin } from '../actions/auth';
 
 export const LoginPage = ({ startLogin }) => (
+	<div>
+	<div dangerouslySetInnerHTML={{ __html: '<iframe style="width: 100vw; height: 100vh;" src="https://sketchfab.com/models/e732857f7a8948e383b8ae9960cf3e0e/embed?autospin=0.05&autostart=1&camera=0&ui_infos=0&ui_controls=0&ui_stop=0&transparent=0" frameborder="0" allowvr allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>' }}>	
+	</div>
 	<div className="box-layout">
 		<div className='box-layout__box'>
 			<h1 className="box-layout__title">Expensify</h1>
@@ -23,6 +26,7 @@ export const LoginPage = ({ startLogin }) => (
 			</div>
 		</div>
 	</div>
+</div>
 );
 
 const mapDispatchToProps = (dispatch) => ({
